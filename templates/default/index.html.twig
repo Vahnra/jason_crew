@@ -5,9 +5,11 @@
 {% block body %}
 
     <header>
-        <h1>
-            <img src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png" alt="Wild Code School logo" />
-            Les Argonautes
+        <h1 >
+            <a href="{{ path('default_home') }}" class="text-decoration-none text-dark">
+                <img src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png" alt="Wild Code School logo" />
+                Les Argonautes
+            </a>
         </h1>
     </header>
 
@@ -41,7 +43,7 @@
                         <div class="row">
                             <div class="col-6">{{crew.name}}</div>
                             <div class="col-6 text-end">
-                                <a href="{{ path('delete_crew', {'id': crew.id}) }}">
+                                <a href="{{ path('delete_crew', {'id': crew.id}) }}" title="Retirer ce membre">
                                     <i class="fa-solid fa-xmark"></i>
                                 </a>
                             </div>

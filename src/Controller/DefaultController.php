@@ -24,6 +24,15 @@ class DefaultController extends AbstractController
 
             $jasonCrew = new JasonCrew;
             $jasonCrew->setName($form->get('name')->getData());
+
+            if ($form->get('name')->getData() == "Jason") {
+                $jasonCrew->setName('Jason, beau, vaillant et courageux');
+            }
+
+            if ($form->get('name')->getData() == "Orn") {
+                $jasonCrew->setName('Orn, chanceux');
+            }
+
             $jasonCrew->setCreatedAt(new DateTime());
 
             $entityManager->persist($jasonCrew);
